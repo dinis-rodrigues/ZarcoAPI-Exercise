@@ -40,7 +40,7 @@ public class CampaignController {
         }
     }
 
-    @GetMapping("/{id}/consume")
+    @PostMapping("/{id}/consume")
     public HttpResponse consumeCampaign(@PathVariable("id") Optional<String> id, @RequestParam("amount") Optional<Double> amount){
         if(id.isPresent() && amount.isPresent()){
             try {
