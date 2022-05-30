@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-
 @Getter
 @Setter
 @Accessors(chain = true)
@@ -33,30 +32,6 @@ public class HttpResponse<T> {
         return response;
     }
 
-    public static <T> HttpResponse<T> unauthorized() {
-        HttpResponse<T> response = new HttpResponse<>();
-        response.setStatus(Status.UNAUTHORIZED);
-        return response;
-    }
-
-    public static <T> HttpResponse<T> validationException() {
-        HttpResponse<T> response = new HttpResponse<>();
-        response.setStatus(Status.VALIDATION_EXCEPTION);
-        return response;
-    }
-
-    public static <T> HttpResponse<T> wrongCredentials() {
-        HttpResponse<T> response = new HttpResponse<>();
-        response.setStatus(Status.WRONG_CREDENTIALS);
-        return response;
-    }
-
-    public static <T> HttpResponse<T> accessDenied() {
-        HttpResponse<T> response = new HttpResponse<>();
-        response.setStatus(Status.ACCESS_DENIED);
-        return response;
-    }
-
     public static <T> HttpResponse<T> exception() {
         HttpResponse<T> response = new HttpResponse<>();
         response.setStatus(Status.EXCEPTION);
@@ -73,14 +48,6 @@ public class HttpResponse<T> {
         HttpResponse<T> response = new HttpResponse<>();
         response.setStatus(Status.DUPLICATE_ENTITY);
         return response;
-    }
-
-    public void addErrorMsgToResponse(String errorMsg, Exception ex) {
-        HttpResponseError error = new HttpResponseError()
-                .setDetails(errorMsg)
-                .setMessage(ex.getMessage())
-                .setTimestamp(DateUtils.today());
-        setErrors(error);
     }
 
     public enum Status {

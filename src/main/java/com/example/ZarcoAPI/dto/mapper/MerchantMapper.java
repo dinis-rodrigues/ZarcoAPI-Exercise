@@ -1,8 +1,6 @@
 package com.example.ZarcoAPI.dto.mapper;
 
-import com.example.ZarcoAPI.dto.model.CampaignDto;
 import com.example.ZarcoAPI.dto.model.MerchantDto;
-import com.example.ZarcoAPI.model.Campaign;
 import com.example.ZarcoAPI.model.Merchant;
 
 public class MerchantMapper {

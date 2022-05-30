@@ -42,32 +42,6 @@ public class ZarcoException {
     }
 
     /**
-     * Returns new RuntimeException based on EntityType, ExceptionType and args
-     *
-     * @param entityType
-     * @param exceptionType
-     * @param args
-     * @return
-     */
-    public static RuntimeException throwExceptionWithId(EntityType entityType, ExceptionType exceptionType, String id, String... args) {
-        String messageTemplate = getMessageTemplate(entityType, exceptionType).concat(".").concat(id);
-        return throwException(exceptionType, messageTemplate, args);
-    }
-
-    /**
-     * Returns new RuntimeException based on EntityType, ExceptionType, messageTemplate and args
-     *
-     * @param entityType
-     * @param exceptionType
-     * @param messageTemplate
-     * @param args
-     * @return
-     */
-    public static RuntimeException throwExceptionWithTemplate(EntityType entityType, ExceptionType exceptionType, String messageTemplate, String... args) {
-        return throwException(exceptionType, messageTemplate, args);
-    }
-
-    /**
      * Returns new RuntimeException based on template and args
      *
      * @param messageTemplate

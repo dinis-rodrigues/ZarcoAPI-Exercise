@@ -1,8 +1,6 @@
 package com.example.ZarcoAPI.controller.api;
 
 import com.example.ZarcoAPI.dto.httpresponse.HttpResponse;
-import com.example.ZarcoAPI.dto.model.MerchantDto;
-import com.example.ZarcoAPI.service.CampaignService;
 import com.example.ZarcoAPI.service.MerchantService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

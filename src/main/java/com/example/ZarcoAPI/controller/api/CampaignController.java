@@ -19,11 +19,13 @@ public class CampaignController {
     public HttpResponse getAllCampaigns(@RequestParam("limit") Optional<Integer> limit, @RequestParam("offset") Optional<Integer> offset){
         try {
             if(limit.isPresent() && offset.isPresent()) {
+                // Query limit with offset
                 return HttpResponse.ok().setPayload(campaignService.getCampaigns(limit.get(), offset.get()));
             } else if (limit.isPresent() && !offset.isPresent()) {
+                // Query limit
                 return HttpResponse.ok().setPayload(campaignService.getCampaigns(limit.get()));
             }
-
+            // Query all campaigns
             return HttpResponse.ok().setPayload(campaignService.getAllCampaigns());
         } catch (Exception e){
             return HttpResponse.badRequest().setErrors(e.getMessage());

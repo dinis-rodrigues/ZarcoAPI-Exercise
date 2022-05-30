@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import java.math.BigDecimal;
-
 @Data
 @Accessors(chain = true)
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
