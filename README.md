@@ -1,6 +1,6 @@
 # ZarcoAPI Exercise
 
-This project uses Spring and Docker with MongoDB to execute a campaign/merchant API.
+This project uses Spring Boot and Docker with MongoDB to execute a campaign/merchant API.
 
 ## Run locally
 
@@ -8,13 +8,8 @@ This project uses Spring and Docker with MongoDB to execute a campaign/merchant 
    - MongoDB starts at `http://localhost:8081/db/zarcoDB/`
 2. Run the java application
    - API listens at `http://localhost:8082`
-3. Star making requests!
+3. Start making requests!
    - You can view the [API documentation here](https://documenter.getpostman.com/view/5971394/Uz5CLxaU)
-
-## API
-
-`/api/campaigns`: Returns all campaigns
-``
 
 ## Database Schema
 
